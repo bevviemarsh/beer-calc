@@ -84,6 +84,17 @@ li:hover span {
           transform: translate(-50%, -50%);
 }
 
+.beer i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 350px;
+  color: #AC3B61;
+  opacity: 0.3;
+}
+
 .burger {
   position: absolute;
   top: 10%;
