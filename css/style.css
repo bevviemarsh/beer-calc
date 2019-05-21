@@ -29,6 +29,8 @@ nav {
   top: 0;
   left: 0;
   background-color: #0D1321;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 nav ul {
@@ -97,7 +99,20 @@ li:hover span {
 
 .burger {
   position: absolute;
-  top: 10%;
+  top: 7%;
   right: 10%;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 50%;
+  border: 2px solid #F3C677;
+  background-color: #F3C677;
+  text-align: center;
+  line-height: 7vh;
+  font-size: 40px;
+  font-family: 'Monoton', cursive;
+  color: #0D1321;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=style.css.map */
