@@ -87,6 +87,11 @@ li:hover span {
   left: 0%;
 }
 
+a {
+  text-decoration: none;
+  color: #F3C677;
+}
+
 .beer {
   position: absolute;
   top: 50%;
