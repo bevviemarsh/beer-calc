@@ -132,14 +132,140 @@ a {
 
 .mainP {
   position: absolute;
-  bottom: 15%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  bottom: 15%;
   font-family: 'Montaga', serif;
   font-size: 30px;
   font-weight: bold;
   color: #AC3B61;
   opacity: 0.4;
+}
+
+.yeastP {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 7%;
+  font-family: 'Montaga', serif;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 50px;
+  color: #0D1321;
+  opacity: 0.5;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+input.inputYeast {
+  width: 40vh;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.1px solid #2274A5;
+  font-family: 'Quicksand', sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  text-align: center;
+}
+
+input.inputYeast::-webkit-input-placeholder {
+  opacity: 1;
+  color: #2274A5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input.inputYeast:-ms-input-placeholder {
+  opacity: 1;
+  color: #2274A5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input.inputYeast::-ms-input-placeholder {
+  opacity: 1;
+  color: #2274A5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input.inputYeast::placeholder {
+  opacity: 1;
+  color: #2274A5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input.inputYeast:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input.inputYeast:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+input.inputYeast:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+input.inputYeast:focus::placeholder {
+  opacity: 0;
+}
+
+span {
+  font-family: 'Quicksand', sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+}
+
+button.countYeast {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 60%;
+  height: 7vh;
+  width: 20vh;
+  font-family: 'Quicksand', sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  text-align: center;
+  line-height: 7vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1px solid #0D1321;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+button:hover {
+  color: #2274A5;
+  border-bottom: 0.1px solid #2274A5;
+}
+
+div.resultYeast {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 75%;
+  font-family: 'Quicksand', sans-serif;
+  color: #2274A5;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+span.waterYeast {
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */
