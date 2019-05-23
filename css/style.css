@@ -129,4 +129,17 @@ a {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+.mainP {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: 'Montaga', serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #AC3B61;
+  opacity: 0.4;
+}
 /*# sourceMappingURL=style.css.map */
