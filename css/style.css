@@ -167,7 +167,7 @@ form {
 }
 
 input.inputYeast {
-  width: 40vh;
+  width: 45vh;
   border: none;
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
@@ -221,12 +221,6 @@ input.inputYeast:focus::placeholder {
   opacity: 0;
 }
 
-span {
-  font-family: 'Quicksand', sans-serif;
-  color: #0D1321;
-  font-size: 30px;
-}
-
 button.countYeast {
   position: absolute;
   left: 50%;
@@ -267,5 +261,27 @@ div.resultYeast {
 
 span.waterYeast {
   font-weight: normal;
+}
+
+button.resetYeast {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  font-family: 'Quicksand', sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  text-align: center;
+  line-height: 7vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1px solid #0D1321;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+button.resetYeast:hover {
+  color: #2274A5;
+  border-bottom: 0.1px solid #2274A5;
 }
 /*# sourceMappingURL=style.css.map */
