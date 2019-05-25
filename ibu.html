@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montaga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,11 +26,31 @@
         </ul>
     </nav>
 
+    <p class="ibuP">
+        What about bitterness?
+        <br>
+        Remember about hops, alpha acid
+        <br>
+        and amount of wort
+        <br>
+        Check how bitter is your beer
+    </p>
 
+    <form class="formIBbu" action="">
+        <input class="amountHops" type="text" placeholder="Hops (g)">
+        <input class="alphaAcid" type="text" placeholder="Alpha acid (%)">
+        <input class="wort" type="text" placeholder="Amount of wort">
+    </form>
 
+    <button class="countIbu">Calculate</button>
+
+    <div class="resultIbu"></div>
+
+    <button class="resetIbu">Reset</button>
 
 
     <script src="script.js"></script>
+    <script src="ibu.js"></script>
 </body>
 
 </html>
