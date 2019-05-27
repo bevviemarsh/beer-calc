@@ -141,6 +141,7 @@ a {
   font-weight: bold;
   color: #AC3B61;
   opacity: 0.4;
+  text-align: center;
 }
 
 .yeastP {
@@ -845,6 +846,124 @@ span.ibuEbu {
   }
   .wort {
     width: 40%;
+  }
+}
+
+@media (max-width: 425px) {
+  .burger {
+    top: 7%;
+    left: calc(50% - 7vh / 2);
+    border: none;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 80px;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 2;
+  }
+  div.burger.active {
+    color: #F3C677;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  div.burger.active + nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  div.burger.active + nav + .beer {
+    display: none;
+  }
+  div.burger.active + nav + .beer + .mainP {
+    display: none;
+  }
+  .beer i {
+    font-size: 200px;
+    z-index: -2;
+  }
+  .mainP {
+    bottom: 25%;
+    font-size: 25px;
+  }
+  nav {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    left: 0;
+    opacity: 0;
+  }
+  nav ul {
+    list-style: none;
+  }
+  nav ul li {
+    font-size: 45px;
+    margin: 3vh;
+  }
+  .yeastP {
+    display: none;
+  }
+  form.formYeast {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  button.countYeast {
+    top: 45%;
+  }
+  div.resultYeast {
+    top: 60%;
+  }
+  button.resetYeast {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .alcP {
+    display: none;
+  }
+  .formAlc {
+    top: 40%;
+  }
+  .countAlc {
+    top: 50%;
+  }
+  .resultAlc {
+    top: 60%;
+  }
+  .resetAlc {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .ibuP {
+    display: none;
+  }
+  .formIBbu {
+    top: 40%;
+  }
+  .amountHops {
+    width: 50%;
+  }
+  .alphaAcid {
+    width: 70%;
+  }
+  .wort {
+    width: 80%;
+  }
+  .countIbu {
+    top: 55%;
+  }
+  .resultIbu {
+    top: 65%;
+  }
+  .resetIbu {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 /*# sourceMappingURL=style.css.map */
