@@ -171,6 +171,7 @@ input.inputYeast {
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
+  margin: 1vh;
   font-family: 'Quicksand', sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -310,6 +311,7 @@ button.resetYeast:hover {
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
+  margin: 1vh;
   font-family: 'Quicksand', sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -365,6 +367,7 @@ button.resetYeast:hover {
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
+  margin: 1vh;
   font-family: 'Quicksand', sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -496,6 +499,19 @@ span.perCent {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .amountHops {
@@ -506,6 +522,7 @@ span.perCent {
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
+  margin: 1vh;
 }
 
 .amountHops::-webkit-input-placeholder {
@@ -560,6 +577,7 @@ span.perCent {
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
+  margin: 1vh;
 }
 
 .alphaAcid::-webkit-input-placeholder {
@@ -607,10 +625,6 @@ span.perCent {
 }
 
 .wort {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   font-family: 'Quicksand', sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -618,7 +632,7 @@ span.perCent {
   background-color: transparent;
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
-  margin-top: 20px;
+  margin: 1vh;
 }
 
 .wort::-webkit-input-placeholder {
@@ -726,5 +740,59 @@ span.ibuEbu {
 .resetIbu:hover {
   color: #2274A5;
   border-bottom: 0.1px solid #2274A5;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    width: 30vh;
+  }
+  .beer i {
+    font-size: 250px;
+  }
+  .mainP {
+    bottom: 25%;
+    font-size: 25px;
+  }
+  .yeastP {
+    line-height: 40px;
+  }
+  .alcP {
+    line-height: 40px;
+  }
+  .ibuP {
+    line-height: 40px;
+  }
+  .formIBbu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 60%;
+    width: 70%;
+  }
+  .amountHops {
+    height: 20%;
+    width: 30%;
+    margin: 2vh;
+  }
+  .alphaAcid {
+    height: 20%;
+    width: 30%;
+    margin: 2vh;
+  }
+  .wort {
+    height: 20%;
+    width: 30%;
+    margin: 2vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
