@@ -795,4 +795,56 @@ span.ibuEbu {
     margin: 2vh;
   }
 }
+
+@media (max-width: 768px) {
+  nav {
+    width: 25vh;
+  }
+  nav ul {
+    list-style: none;
+  }
+  nav ul li {
+    font-size: 25px;
+  }
+  .beer i {
+    font-size: 200px;
+  }
+  .mainP {
+    bottom: 30%;
+    font-size: 20px;
+  }
+  .formAlc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .startBlg {
+    margin: 2vh;
+  }
+  .endBlg {
+    margin: 2vh;
+  }
+  .countAlc {
+    top: 62%;
+  }
+  .amountHops {
+    width: 40%;
+  }
+  .alphaAcid {
+    width: 40%;
+  }
+  .wort {
+    width: 40%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
