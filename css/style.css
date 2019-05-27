@@ -966,4 +966,22 @@ span.ibuEbu {
             transform: translateX(-50%);
   }
 }
+
+@media (max-width: 375px) {
+  .amountHops {
+    width: 80%;
+  }
+  .alphaAcid {
+    width: 90%;
+  }
+  .wort {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .wort {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
