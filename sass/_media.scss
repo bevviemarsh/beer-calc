@@ -1,0 +1,264 @@
+@media (max-width: 1024px) {
+    nav {
+        width: 30vh;
+    }
+
+    .beer i {
+        font-size: 250px;
+    }
+
+    .mainP {
+        bottom: 25%;
+        font-size: 25px;
+    }
+
+    .yeastP {
+        line-height: 40px;
+    }
+
+    .alcP {
+        line-height: 40px;
+    }
+
+    .ibuP {
+        line-height: 40px;
+    }
+
+    .formIBbu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 60%;
+        width: 70%;
+    }
+
+    .amountHops {
+        height: 20%;
+        width: 30%;
+        margin: 2vh;
+    }
+
+    .alphaAcid {
+        height: 20%;
+        width: 30%;
+        margin: 2vh;
+    }
+
+    .wort {
+        height: 20%;
+        width: 30%;
+        margin: 2vh;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 25vh;
+
+        ul {
+            list-style: none;
+
+            li {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .beer i {
+        font-size: 200px;
+    }
+
+    .mainP {
+        bottom: 30%;
+        font-size: 20px;
+    }
+
+    .formAlc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .startBlg {
+        margin: 2vh;
+    }
+
+    .endBlg {
+        margin: 2vh;
+    }
+
+    .countAlc {
+        top: 62%;
+    }
+
+    .amountHops {
+        width: 40%;
+    }
+
+    .alphaAcid {
+        width: 40%;
+    }
+
+    .wort {
+        width: 40%;
+    }
+}
+
+@media (max-width: 425px) {
+    .burger {
+        top: 7%;
+        left: calc(50% - 7vh / 2);
+        border: none;
+        background-color: transparent;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 80px;
+        transition: none;
+        z-index: 2;
+    }
+
+    div.burger.active {
+        color: $yellowColor;
+        transform: rotate((45deg));
+    }
+
+    div.burger.active+nav {
+        display: flex;
+        opacity: 1;
+    }
+
+    div.burger.active+nav+.beer {
+        display: none;
+    }
+
+    div.burger.active+nav+.beer+.mainP {
+        display: none;
+    }
+
+    .beer i {
+        font-size: 200px;
+        z-index: -2;
+    }
+
+    .mainP {
+        bottom: 25%;
+        font-size: 25px;
+    }
+
+    nav {
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        left: 0;
+        opacity: 0;
+
+        ul {
+            list-style: none;
+
+            li {
+                font-size: 45px;
+                margin: 3vh;
+            }
+        }
+    }
+
+    .yeastP {
+        display: none;
+    }
+
+    form.formYeast {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    button.countYeast {
+        top: 45%;
+    }
+
+    div.resultYeast {
+        top: 60%;
+    }
+
+    button.resetYeast {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .alcP {
+        display: none;
+    }
+
+    .formAlc {
+        top: 40%;
+    }
+
+    .countAlc {
+        top: 50%;
+    }
+
+    .resultAlc {
+        top: 60%;
+    }
+
+    .resetAlc {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .ibuP {
+        display: none;
+    }
+
+    .formIBbu {
+        top: 40%;
+    }
+
+    .amountHops {
+        width: 50%;
+    }
+
+    .alphaAcid {
+        width: 70%;
+    }
+
+    .wort {
+        width: 80%;
+    }
+
+    .countIbu {
+        top: 55%;
+    }
+
+    .resultIbu {
+        top: 65%;
+    }
+
+    .resetIbu {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 375px) {
+    .amountHops {
+        width: 80%;
+    }
+
+    .alphaAcid {
+        width: 90%;
+    }
+
+    .wort {
+        width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .wort {
+        width: 95%;
+    }
+}

@@ -1,0 +1,10 @@
+.beer {
+    @include absolute-center();
+
+    i {
+        @include absolute-center();
+        font-size: 350px;
+        color: $pinkColor;
+        opacity: 0.3;
+    }
+}

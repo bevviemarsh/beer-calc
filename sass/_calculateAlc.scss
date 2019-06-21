@@ -1,0 +1,66 @@
+.alcP {
+    @include centerX();
+    @include paragraphs();
+}
+
+.formAlc {
+    @include absolute-center();
+}
+
+.startBlg {
+    width: 30vh;
+    @include inputs();
+    @include Font();
+}
+
+.startBlg::placeholder {
+    @include inputsHover();
+}
+
+.startBlg:focus::placeholder {
+    opacity: 0;
+}
+
+.endBlg {
+    width: 30vh;
+    @include inputs();
+    @include Font();
+}
+
+.endBlg::placeholder {
+    @include inputsHover();
+}
+
+.endBlg:focus::placeholder {
+    opacity: 0;
+}
+
+.countAlc {
+    @include centerX ();
+    top: 60%;
+    @include Font();
+    @include buttons();
+}
+
+.countAlc:hover {
+    @include buttonsHover();
+}
+
+.resultAlc {
+    @include centerX();
+    @include divs();
+}
+
+span.perCent {
+    font-weight: normal;
+}
+
+.resetAlc {
+    @include resetPosition();
+    @include Font();
+    @include buttons();
+}
+
+.resetAlc:hover {
+    @include buttonsHover();
+}

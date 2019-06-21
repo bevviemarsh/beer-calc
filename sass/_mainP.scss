@@ -1,0 +1,10 @@
+.mainP {
+    @include centerX();
+    bottom: 15%;
+    font-family: 'Montaga', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: $pinkColor;
+    opacity: 0.4;
+    text-align: center;
+}

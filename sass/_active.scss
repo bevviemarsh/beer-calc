@@ -1,0 +1,7 @@
+div.burger.active {
+    transform: rotate((405deg));
+}
+
+div.burger.active+nav {
+    left: 0;
+}
