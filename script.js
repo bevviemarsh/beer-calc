@@ -1,8 +1,7 @@
-//nav's gear
-const burger = document.querySelector('div.burger');
+const burger = document.querySelector("div.burger");
 
 const navGear = () => {
-    burger.classList.toggle('active');
+  burger.classList.toggle("active");
 };
 
-burger.addEventListener('click', navGear);
+burger.addEventListener("click", navGear);
