@@ -4,6 +4,7 @@ const buttonYeast = document.querySelector("button.countYeast");
 const inputYeast = document.querySelector("input.inputYeast");
 const divYeast = document.querySelector("div.resultYeast");
 const buttonResetYeast = document.querySelector("button.resetYeast");
+const checkboxReset = document.querySelector("input.resetCheck");
 
 const calcYeast = () => {
   const inputYeastValue = inputYeast.value;
@@ -14,14 +15,15 @@ const calcYeast = () => {
 
   const resultYeast = inputYeastValue * COUNTERYEAST;
   divYeast.innerHTML = `${resultYeast} <span class="waterYeast">ml</span>`;
-
-  inputYeast.value = "";
 };
 
 buttonYeast.addEventListener("click", calcYeast);
 
 const resetYeast = () => {
   divYeast.innerHTML = "";
+  if (checkboxReset.checked === true) {
+    inputYeast.value = "";
+  }
 };
 
 buttonResetYeast.addEventListener("click", resetYeast);

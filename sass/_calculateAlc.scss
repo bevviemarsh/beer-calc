@@ -1,66 +1,68 @@
 .alcP {
-    @include centerX();
-    @include paragraphs();
+  @include centerX();
+  @include paragraphs();
 }
 
 .formAlc {
-    @include absolute-center();
+  @include absolute-center();
 }
 
 .startBlg {
-    width: 30vh;
-    @include inputs();
-    @include Font();
+  width: 30vh;
+  @include inputs();
+  @include Font();
 }
 
 .startBlg::placeholder {
-    @include inputsHover();
+  @include inputsHover();
 }
 
 .startBlg:focus::placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 .endBlg {
-    width: 30vh;
-    @include inputs();
-    @include Font();
+  width: 30vh;
+  @include inputs();
+  @include Font();
 }
 
 .endBlg::placeholder {
-    @include inputsHover();
+  @include inputsHover();
 }
 
 .endBlg:focus::placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 .countAlc {
-    @include centerX ();
-    top: 60%;
-    @include Font();
-    @include buttons();
+  @include centerX();
+  top: 60%;
+  @include Font();
+  @include buttons();
 }
 
 .countAlc:hover {
-    @include buttonsHover();
+  @include buttonsHover();
 }
 
 .resultAlc {
-    @include centerX();
-    @include divs();
+  @include centerX();
+  @include divs();
 }
 
 span.perCent {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .resetAlc {
-    @include resetPosition();
-    @include Font();
-    @include buttons();
+  @include resetPosition();
+  @include Font();
+  @include buttons();
 }
 
 .resetAlc:hover {
-    @include buttonsHover();
+  @include buttonsHover();
 }
+
+@include resetCheckbox();

@@ -18,6 +18,17 @@ body {
   background-color: #F6F1ED;
 }
 
+.left {
+  position: absolute;
+  background-color: #AC3B61;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40vh;
+  z-index: -1;
+  opacity: 0.3;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,7 +161,7 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 7%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 20px;
   text-align: center;
   line-height: 50px;
@@ -173,7 +184,7 @@ input.inputYeast {
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
   margin: 1vh;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
 }
@@ -228,7 +239,7 @@ button.countYeast {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 60%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   text-align: center;
@@ -252,7 +263,7 @@ div.resultYeast {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 75%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #AC3B61;
   font-size: 30px;
   font-weight: bold;
@@ -264,9 +275,10 @@ span.waterYeast {
 
 button.resetYeast {
   position: absolute;
-  bottom: 15%;
-  right: 10%;
-  font-family: 'Quicksand', sans-serif;
+  bottom: 21%;
+  right: 7%;
+  width: 20vh;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   text-align: center;
@@ -284,13 +296,34 @@ button.resetYeast:hover {
   border-bottom: 0.1px solid #2274A5;
 }
 
+input.resetCheck {
+  position: absolute;
+  bottom: 12%;
+  right: 15%;
+}
+
+label.resetLabel {
+  position: absolute;
+  bottom: 5%;
+  right: 7%;
+  width: 15vh;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 15px;
+}
+
+label.resetLabel:hover {
+  color: #2274A5;
+  cursor: pointer;
+}
+
 .alcP {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 7%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 20px;
   text-align: center;
   line-height: 50px;
@@ -313,7 +346,7 @@ button.resetYeast:hover {
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
   margin: 1vh;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
 }
@@ -369,7 +402,7 @@ button.resetYeast:hover {
   border-bottom: 0.1px solid #2274A5;
   text-align: center;
   margin: 1vh;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
 }
@@ -424,7 +457,7 @@ button.resetYeast:hover {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 60%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   text-align: center;
@@ -448,7 +481,7 @@ button.resetYeast:hover {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 75%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #AC3B61;
   font-size: 30px;
   font-weight: bold;
@@ -460,9 +493,10 @@ span.perCent {
 
 .resetAlc {
   position: absolute;
-  bottom: 15%;
-  right: 10%;
-  font-family: 'Quicksand', sans-serif;
+  bottom: 21%;
+  right: 7%;
+  width: 20vh;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   text-align: center;
@@ -480,13 +514,34 @@ span.perCent {
   border-bottom: 0.1px solid #2274A5;
 }
 
+input.resetCheck {
+  position: absolute;
+  bottom: 12%;
+  right: 15%;
+}
+
+label.resetLabel {
+  position: absolute;
+  bottom: 5%;
+  right: 7%;
+  width: 15vh;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 15px;
+}
+
+label.resetLabel:hover {
+  color: #2274A5;
+  cursor: pointer;
+}
+
 .ibuP {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 7%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 20px;
   text-align: center;
   line-height: 50px;
@@ -516,7 +571,7 @@ span.perCent {
 }
 
 .amountHops {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   border: none;
@@ -571,7 +626,7 @@ span.perCent {
 }
 
 .alphaAcid {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   border: none;
@@ -626,7 +681,7 @@ span.perCent {
 }
 
 .wort {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   border: none;
@@ -686,7 +741,7 @@ span.perCent {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 67%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   text-align: center;
@@ -710,7 +765,7 @@ span.perCent {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 75%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #AC3B61;
   font-size: 30px;
   font-weight: bold;
@@ -723,9 +778,10 @@ span.ibuEbu {
 
 .resetIbu {
   position: absolute;
-  bottom: 15%;
-  right: 10%;
-  font-family: 'Quicksand', sans-serif;
+  bottom: 21%;
+  right: 7%;
+  width: 20vh;
+  font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   text-align: center;
@@ -741,6 +797,27 @@ span.ibuEbu {
 .resetIbu:hover {
   color: #2274A5;
   border-bottom: 0.1px solid #2274A5;
+}
+
+input.resetCheck {
+  position: absolute;
+  bottom: 12%;
+  right: 15%;
+}
+
+label.resetLabel {
+  position: absolute;
+  bottom: 5%;
+  right: 7%;
+  width: 15vh;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 15px;
+}
+
+label.resetLabel:hover {
+  color: #2274A5;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {

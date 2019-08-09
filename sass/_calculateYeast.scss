@@ -1,52 +1,54 @@
 .yeastP {
-    @include centerX();
-    @include paragraphs();
+  @include centerX();
+  @include paragraphs();
 }
 
 form.formYeast {
-    @include absolute-center();
+  @include absolute-center();
 }
 
 input.inputYeast {
-    width: 45vh;
-    @include inputs();
-    @include Font();
+  width: 45vh;
+  @include inputs();
+  @include Font();
 }
 
 input.inputYeast::placeholder {
-    @include inputsHover();
+  @include inputsHover();
 }
 
 input.inputYeast:focus::placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 button.countYeast {
-    @include centerX ();
-    top: 60%;
-    @include Font();
-    @include buttons();
+  @include centerX();
+  top: 60%;
+  @include Font();
+  @include buttons();
 }
 
 button:hover {
-    @include buttonsHover();
+  @include buttonsHover();
 }
 
 div.resultYeast {
-    @include centerX();
-    @include divs();
+  @include centerX();
+  @include divs();
 }
 
 span.waterYeast {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 button.resetYeast {
-    @include resetPosition();
-    @include Font();
-    @include buttons();
+  @include resetPosition();
+  @include Font();
+  @include buttons();
 }
 
 button.resetYeast:hover {
-    @include buttonsHover();
+  @include buttonsHover();
 }
+
+@include resetCheckbox();

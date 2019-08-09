@@ -6,6 +6,7 @@ const inputEnd = document.querySelector("input.endBlg");
 const buttonAlc = document.querySelector("button.countAlc");
 const buttonResetAlc = document.querySelector("button.resetAlc");
 const divAlc = document.querySelector("div.resultAlc");
+const checkboxReset = document.querySelector("input.resetCheck");
 
 const calcAlc = () => {
   const inputAlcStartValue = inputStart.value;
@@ -18,15 +19,16 @@ const calcAlc = () => {
   const resultAlc = (inputAlcStartValue - inputAlcEndValue) / COUNTER;
 
   divAlc.innerHTML = `${resultAlc.toFixed(1)} <span class="perCent">%</span>`;
-
-  inputStart.value = "";
-  inputEnd.value = "";
 };
 
 buttonAlc.addEventListener("click", calcAlc);
 
 const resetAlc = () => {
   divAlc.innerHTML = "";
+  if (checkboxReset.checked === true) {
+    inputStart.value = "";
+    inputEnd.value = "";
+  }
 };
 
 buttonResetAlc.addEventListener("click", resetAlc);

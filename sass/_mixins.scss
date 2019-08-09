@@ -1,78 +1,102 @@
 @mixin flex-column-center() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @mixin absolute-center() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin centerX() {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @mixin paragraphs() {
-    top: 7%;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
-    color: $darkColor;
-    opacity: 0.5;
+  top: 7%;
+  font-family: "Source Code Pro", monospace;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  color: $darkColor;
+  opacity: 0.5;
 }
 
 @mixin Font() {
-    font-family: 'Quicksand', sans-serif;
-    color: $darkColor;
-    font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  color: $darkColor;
+  font-size: 30px;
 }
 
 @mixin inputs() {
-    border: none;
-    background-color: transparent;
-    border-bottom: 0.1px solid $blueColor;
-    text-align: center;
-    margin: 1vh;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.1px solid $blueColor;
+  text-align: center;
+  margin: 1vh;
 }
 
 @mixin inputsHover() {
-    opacity: 1;
-    color: $blueColor;
-    transition: $transitionTime;
+  opacity: 1;
+  color: $blueColor;
+  transition: $transitionTime;
 }
 
 @mixin buttons() {
-    text-align: center;
-    line-height: 7vh;
-    background-color: transparent;
-    border: none;
-    border-bottom: 0.1px solid $darkColor;
-    cursor: pointer;
-    transition: $transitionTime;
+  text-align: center;
+  line-height: 7vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1px solid $darkColor;
+  cursor: pointer;
+  transition: $transitionTime;
 }
 
 @mixin buttonsHover() {
-    color: $blueColor;
-    border-bottom: 0.1px solid $blueColor;
+  color: $blueColor;
+  border-bottom: 0.1px solid $blueColor;
 }
 
 @mixin divs() {
-    top: 75%;
-    font-family: 'Quicksand', sans-serif;
-    color: $pinkColor;
-    font-size: 30px;
-    font-weight: bold;
+  top: 75%;
+  font-family: "Quicksand", sans-serif;
+  color: $pinkColor;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 @mixin resetPosition() {
+  position: absolute;
+  bottom: 21%;
+  right: 7%;
+  width: 20vh;
+}
+
+@mixin resetCheckbox() {
+  input.resetCheck {
     position: absolute;
-    bottom: 15%;
-    right: 10%;
+    bottom: 12%;
+    right: 15%;
+  }
+
+  label.resetLabel {
+    position: absolute;
+    bottom: 5%;
+    right: 7%;
+    width: 15vh;
+    font-family: "Quicksand", sans-serif;
+    color: $darkColor;
+    font-size: 15px;
+  }
+
+  label.resetLabel:hover {
+    color: $blueColor;
+    cursor: pointer;
+  }
 }

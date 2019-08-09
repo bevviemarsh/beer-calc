@@ -8,6 +8,7 @@ const inputWort = document.querySelector("input.wort");
 const buttonIbuCalc = document.querySelector("button.countIbu");
 const divIbu = document.querySelector("div.resultIbu");
 const buttonResetIbu = document.querySelector("button.resetIbu");
+const checkboxReset = document.querySelector("input.resetCheck");
 
 const countIbu = () => {
   const inputHopsValue = inputHops.value;
@@ -26,16 +27,17 @@ const countIbu = () => {
     (inputWortValue * COUNTER_ONE);
 
   divIbu.innerHTML = `${Iburesult.toFixed()} <span class="ibuEbu">IBU/EBU</span>`;
-
-  inputHops.value = "";
-  inputAlpha.value = "";
-  inputWort.value = "";
 };
 
 buttonIbuCalc.addEventListener("click", countIbu);
 
 const resetIbu = () => {
   divIbu.innerHTML = "";
+  if (checkboxReset.checked === true) {
+    inputHops.value = "";
+    inputAlpha.value = "";
+    inputWort.value = "";
+  }
 };
 
 buttonResetIbu.addEventListener("click", resetIbu);

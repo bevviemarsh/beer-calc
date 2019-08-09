@@ -1,79 +1,81 @@
 .ibuP {
-    @include centerX();
-    @include paragraphs();
+  @include centerX();
+  @include paragraphs();
 }
 
 .formIBbu {
-    @include absolute-center();
-    @include flex-column-center();
+  @include absolute-center();
+  @include flex-column-center();
 }
 
 .amountHops {
-    @include Font();
-    @include inputs();
+  @include Font();
+  @include inputs();
 }
 
 .amountHops::placeholder {
-    @include inputsHover();
+  @include inputsHover();
 }
 
 .amountHops:focus::placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 .alphaAcid {
-    @include Font();
-    @include inputs();
+  @include Font();
+  @include inputs();
 }
 
 .alphaAcid::placeholder {
-    @include inputsHover();
+  @include inputsHover();
 }
 
 .alphaAcid:focus::placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 .wort {
-    @include Font();
-    @include inputs();
+  @include Font();
+  @include inputs();
 }
 
 .wort::placeholder {
-    @include inputsHover();
+  @include inputsHover();
 }
 
 .wort:focus::placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 .countIbu {
-    @include centerX ();
-    top: 67%;
-    @include Font();
-    @include buttons();
+  @include centerX();
+  top: 67%;
+  @include Font();
+  @include buttons();
 }
 
 .countIbu:hover {
-    @include buttonsHover();
+  @include buttonsHover();
 }
 
 .resultIbu {
-    @include centerX();
-    @include divs();
-    top: 80%
+  @include centerX();
+  @include divs();
+  top: 80%;
 }
 
 span.ibuEbu {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .resetIbu {
-    @include resetPosition();
-    @include Font();
-    @include buttons();
+  @include resetPosition();
+  @include Font();
+  @include buttons();
 }
 
 .resetIbu:hover {
-    @include buttonsHover();
+  @include buttonsHover();
 }
+
+@include resetCheckbox();

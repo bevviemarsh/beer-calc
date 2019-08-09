@@ -1,3 +1,14 @@
 body {
-    background-color: $backgroundColor;
+  background-color: $backgroundColor;
+}
+
+.left {
+  position: absolute;
+  background-color: $pinkColor;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40vh;
+  z-index: -1;
+  opacity: 0.3;
 }
