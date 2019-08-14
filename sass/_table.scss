@@ -1,0 +1,40 @@
+.layout {
+  position: absolute;
+  right: 7%;
+  top: 30%;
+  border-collapse: collapse;
+  border: 1px solid $blueColor;
+  box-shadow: 0px 0px 3px 1px $darkColor;
+  @include Font();
+  width: 40vh;
+  height: 30vh;
+
+  &__header,
+  &__body {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.resultOne,
+.resultTwo,
+.resultThree {
+  font-weight: normal;
+  width: 60%;
+  @include FontTable();
+}
+
+.saveBtn,
+.saveBtn,
+.saveBtn {
+  @include FontTable();
+  @include buttons();
+  border: none;
+}
+
+.saveBtn:hover,
+.saveBtn:hover,
+.saveBtn:hover {
+  @include buttonsHover();
+  border: none;
+}

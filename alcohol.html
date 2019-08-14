@@ -46,9 +46,9 @@
       <br />
       You can't guess
       <br />
-      You have to count
+      Focus on Balling degree
       <br />
-      Focus on Balling degree before and after fermentation
+      before and after fermentation
     </p>
 
     <form class="formAlc" action="">
@@ -60,14 +60,46 @@
 
     <div class="resultAlc"></div>
 
+    <table class="layout responsive-layout">
+      <thead class="layout__header">
+        <tr>
+          <td colspan="2">Last results</td>
+        </tr>
+      </thead>
+      <tbody class="layout__body">
+        <tr>
+          <td class="resultOne"></td>
+          <td>
+            <button class="saveBtn">Save</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="resultTwo"></td>
+          <td>
+            <button class="saveBtn">Save</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="resultThree"></td>
+          <td>
+            <button class="saveBtn">Save</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <button class="resetAlc">Reset</button>
     <input class="resetCheck" type="checkbox" name="reset" id="reset" />
     <label class="resetLabel" for="reset"
       >Delete immediately your data and dont's save in the data table</label
     >
+    <label class="resetLabelMobile" for="reset">Delete immediately</label>
 
     <div class="left"></div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <script src="alc.js"></script>
   </body>

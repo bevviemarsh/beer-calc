@@ -5,6 +5,7 @@
 
 .formAlc {
   @include absolute-center();
+  @include flex-column-center();
 }
 
 .startBlg {
