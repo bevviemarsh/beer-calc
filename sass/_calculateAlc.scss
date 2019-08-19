@@ -6,6 +6,7 @@
 .formAlc {
   @include absolute-center();
   @include flex-column-center();
+  height: 32vh;
 }
 
 .startBlg {
@@ -36,9 +37,14 @@
   opacity: 0;
 }
 
+span.spanFormAlc {
+  @include Font();
+  font-size: 16px;
+  color: $pinkColor;
+  font-weight: bold;
+}
+
 .countAlc {
-  @include centerX();
-  top: 60%;
   @include Font();
   @include buttons();
 }

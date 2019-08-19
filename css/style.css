@@ -18,16 +18,6 @@ body {
   background-color: #F6F1ED;
 }
 
-.left {
-  position: absolute;
-  background-color: #0D1321;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 40vh;
-  z-index: -1;
-}
-
 .resetLabelMobile {
   display: none;
 }
@@ -36,9 +26,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -61,9 +51,9 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -76,9 +66,9 @@ nav ul {
 nav ul li {
   position: relative;
   margin: 7vh;
-  font-size: 30px;
+  font-size: 20px;
   color: #F3C677;
-  font-family: 'News Cycle', sans-serif;
+  font-family: "News Cycle", sans-serif;
   letter-spacing: 5px;
   cursor: pointer;
   overflow: hidden;
@@ -178,6 +168,20 @@ form.formYeast {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20vh;
 }
 
 input.inputYeast {
@@ -236,12 +240,16 @@ input.inputYeast:focus::placeholder {
   opacity: 0;
 }
 
+span.spanFormYeast {
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 16px;
+  color: #AC3B61;
+  font-weight: bold;
+}
+
 button.countYeast {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 60%;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -343,9 +351,9 @@ label.resetLabel:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -353,6 +361,7 @@ label.resetLabel:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 32vh;
 }
 
 .startBlg {
@@ -467,12 +476,16 @@ label.resetLabel:hover {
   opacity: 0;
 }
 
+span.spanFormAlc {
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 16px;
+  color: #AC3B61;
+  font-weight: bold;
+}
+
 .countAlc {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 60%;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -565,7 +578,7 @@ label.resetLabel:hover {
   opacity: 0.5;
 }
 
-.formIBbu {
+.formIbu {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -574,9 +587,9 @@ label.resetLabel:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -584,6 +597,7 @@ label.resetLabel:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 44vh;
 }
 
 .amountHops {
@@ -751,12 +765,18 @@ label.resetLabel:hover {
   opacity: 0;
 }
 
+span.spanFormIbu {
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 16px;
+  color: #AC3B61;
+  font-weight: bold;
+  text-align: center;
+  width: 18vw;
+}
+
 .countIbu {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 67%;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;

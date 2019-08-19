@@ -5,6 +5,8 @@
 
 form.formYeast {
   @include absolute-center();
+  @include flex-column-center();
+  height: 20vh;
 }
 
 input.inputYeast {
@@ -21,9 +23,14 @@ input.inputYeast:focus::placeholder {
   opacity: 0;
 }
 
+span.spanFormYeast {
+  @include Font();
+  font-size: 16px;
+  color: $pinkColor;
+  font-weight: bold;
+}
+
 button.countYeast {
-  @include centerX();
-  top: 60%;
   @include Font();
   @include buttons();
 }

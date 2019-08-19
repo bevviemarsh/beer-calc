@@ -1,7 +1,9 @@
 const COUNTERYEAST = 10;
 // yeast calc
+const formYeast = document.querySelector("form.formYeast");
 const buttonYeast = document.querySelector("button.countYeast");
 const inputYeast = document.querySelector("input.inputYeast");
+const spanFormYeast = document.querySelector("span.spanFormYeast");
 const divYeast = document.querySelector("div.resultYeast");
 const buttonResetYeast = document.querySelector("button.resetYeast");
 const checkboxReset = document.querySelector("input.resetCheck");
@@ -9,15 +11,22 @@ const resultOne = document.querySelector("td.resultOne");
 const resultTwo = document.querySelector("td.resultTwo");
 const resultThree = document.querySelector("td.resultThree");
 
-const calcYeast = () => {
+formYeast.addEventListener("submit", e => {
+  e.preventDefault();
   const inputYeastValue = inputYeast.value;
 
-  if (inputYeastValue === "") return;
-  if (isNaN(inputYeastValue)) return;
-  if (inputYeastValue > 1000) return;
+  if (
+    inputYeastValue === "" ||
+    isNaN(inputYeastValue) ||
+    inputYeastValue > 1000
+  ) {
+    return (spanFormYeast.innerHTML = `Number from 0 to 1000`);
+  }
 
   const resultYeast = inputYeastValue * COUNTERYEAST;
   divYeast.innerHTML = `${resultYeast} <span class="waterYeast">ml</span>`;
+
+  spanFormYeast.innerHTML = "";
 
   if (!resultOne.innerHTML && !resultTwo.innerHTML && !resultThree.innerHTML) {
     resultOne.innerHTML = `${resultYeast}`;
@@ -35,16 +44,9 @@ const calcYeast = () => {
     resultThree.innerHTML = "";
     resultOne.innerHTML = `${resultYeast}`;
   }
-};
-
-buttonYeast.addEventListener("click", calcYeast);
-
-$("input.inputYeast").on("keypress", e => {
-  if (e.which === 13) {
-    e.preventDefault();
-    calcYeast();
-  }
 });
+
+// formYeast.addEventListener("submit", calcYeast);
 
 const resetYeast = () => {
   divYeast.innerHTML = "";

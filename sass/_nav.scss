@@ -1,48 +1,47 @@
 nav {
+  @include flex-column-center();
+  position: absolute;
+  height: 100vh;
+  width: 40vh;
+  top: 0;
+  left: -40vh;
+  background-color: $darkColor;
+  transition: $transitionTime;
+
+  ul {
+    list-style: none;
     @include flex-column-center();
-    position: absolute;
-    height: 100vh;
-    width: 40vh;
-    top: 0;
-    left: -40vh;
-    background-color: $darkColor;
-    transition: $transitionTime;
 
-    ul {
-        list-style: none;
-        @include flex-column-center();
+    li {
+      position: relative;
+      margin: 7vh;
+      font-size: 20px;
+      color: $yellowColor;
+      font-family: "News Cycle", sans-serif;
+      letter-spacing: 5px;
+      cursor: pointer;
+      overflow: hidden;
 
-        li {
-            position: relative;
-            margin: 7vh;
-            font-size: 30px;
-            color: $yellowColor;
-            font-family: 'News Cycle', sans-serif;
-            letter-spacing: 5px;
-            cursor: pointer;
-            overflow: hidden;
-
-            span {
-                position: absolute;
-                opacity: 0;
-                bottom: 0;
-                left: -100%;
-                height: 1px;
-                width: 100%;
-                background-color: $blueColor;
-                transition: $transitionTime;
-            }
-
-        }
+      span {
+        position: absolute;
+        opacity: 0;
+        bottom: 0;
+        left: -100%;
+        height: 1px;
+        width: 100%;
+        background-color: $blueColor;
+        transition: $transitionTime;
+      }
     }
+  }
 }
 
 li:hover span {
-    opacity: 1;
-    left: 0%;
+  opacity: 1;
+  left: 0%;
 }
 
 a {
-    text-decoration: none;
-    color: $yellowColor;
+  text-decoration: none;
+  color: $yellowColor;
 }

@@ -2,16 +2,6 @@ body {
   background-color: $backgroundColor;
 }
 
-.left {
-  position: absolute;
-  background-color: $darkColor;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 40vh;
-  z-index: -1;
-}
-
 .resetLabelMobile {
   display: none;
 }

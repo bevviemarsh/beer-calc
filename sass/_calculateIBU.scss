@@ -3,9 +3,10 @@
   @include paragraphs();
 }
 
-.formIBbu {
+.formIbu {
   @include absolute-center();
   @include flex-column-center();
+  height: 44vh;
 }
 
 .amountHops {
@@ -47,9 +48,16 @@
   opacity: 0;
 }
 
+span.spanFormIbu {
+  @include Font();
+  font-size: 16px;
+  color: $pinkColor;
+  font-weight: bold;
+  text-align: center;
+  width: 18vw;
+}
+
 .countIbu {
-  @include centerX();
-  top: 67%;
   @include Font();
   @include buttons();
 }

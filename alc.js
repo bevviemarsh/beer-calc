@@ -1,27 +1,40 @@
 const COUNTER = 1.938;
 
 // alc calc
+const formAlc = document.querySelector("form.formAlc");
 const inputStart = document.querySelector("input.startBlg");
 const inputEnd = document.querySelector("input.endBlg");
 const buttonAlc = document.querySelector("button.countAlc");
 const buttonResetAlc = document.querySelector("button.resetAlc");
+const spanFormAlc = document.querySelector("span.spanFormAlc");
 const divAlc = document.querySelector("div.resultAlc");
 const checkboxReset = document.querySelector("input.resetCheck");
 const resultOne = document.querySelector("td.resultOne");
 const resultTwo = document.querySelector("td.resultTwo");
 const resultThree = document.querySelector("td.resultThree");
 
-const calcAlc = () => {
+formAlc.addEventListener("submit", e => {
+  e.preventDefault();
+
   const inputAlcStartValue = inputStart.value;
   const inputAlcEndValue = inputEnd.value;
 
-  if (inputAlcStartValue === "" || inputAlcEndValue === "") return;
-  if (isNaN(inputAlcStartValue) || isNaN(inputAlcEndValue)) return;
-  if (inputAlcStartValue > 100 || inputAlcEndValue > 100) return;
+  if (
+    inputAlcStartValue === "" ||
+    inputAlcEndValue === "" ||
+    isNaN(inputAlcStartValue) ||
+    isNaN(inputAlcEndValue) ||
+    inputAlcStartValue > 100 ||
+    inputAlcEndValue > 100
+  ) {
+    return (spanFormAlc.innerHTML = `Number from 0 to 100`);
+  }
 
   const resultAlc = (inputAlcStartValue - inputAlcEndValue) / COUNTER;
 
   divAlc.innerHTML = `${resultAlc.toFixed(1)} <span class="perCent">%</span>`;
+
+  spanFormAlc.innerHTML = "";
 
   if (!resultOne.innerHTML && !resultTwo.innerHTML && !resultThree.innerHTML) {
     resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
@@ -38,15 +51,6 @@ const calcAlc = () => {
     resultTwo.innerHTML = "";
     resultThree.innerHTML = "";
     resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
-  }
-};
-
-buttonAlc.addEventListener("click", calcAlc);
-
-$("input.startBlg, input.endBlg").on("keypress", e => {
-  if (e.which === 13) {
-    e.preventDefault();
-    calcAlc();
   }
 });
 
