@@ -56,6 +56,7 @@ formAlc.addEventListener("submit", e => {
 
 const resetAlc = () => {
   divAlc.innerHTML = "";
+  spanFormAlc.innerHTML = "";
   if (checkboxReset.checked === true) {
     inputStart.value = "";
     inputEnd.value = "";

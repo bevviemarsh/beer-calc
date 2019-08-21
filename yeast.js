@@ -50,6 +50,7 @@ formYeast.addEventListener("submit", e => {
 
 const resetYeast = () => {
   divYeast.innerHTML = "";
+  spanFormYeast.innerHTML = "";
   if (checkboxReset.checked === true) {
     inputYeast.value = "";
     resultOne.innerHTML = "";

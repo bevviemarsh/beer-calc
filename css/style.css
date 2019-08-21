@@ -202,6 +202,17 @@ a {
   font-size: 30px;
 }
 
+.formAccount__span {
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 25px;
+}
+
+.formAccount__button--create {
+  font-size: 20px;
+}
+
 .yeastP {
   position: absolute;
   left: 50%;

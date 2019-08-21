@@ -65,6 +65,7 @@ formIbu.addEventListener("submit", e => {
 
 const resetIbu = () => {
   divIbu.innerHTML = "";
+  spanFormIbu.innerHTML = "";
   if (checkboxReset.checked === true) {
     inputHops.value = "";
     inputAlpha.value = "";
