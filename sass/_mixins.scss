@@ -43,9 +43,8 @@
 @mixin inputs() {
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid $blueColor;
   text-align: center;
-  margin: 1vh;
+  margin: 2vh;
 }
 
 @mixin inputsHover() {

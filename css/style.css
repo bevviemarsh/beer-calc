@@ -179,9 +179,8 @@ a {
 .formAccount__input-user, .formAccount__input-pass {
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
   text-align: center;
-  margin: 1vh;
+  margin: 2vh;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -249,13 +248,30 @@ form.formYeast {
   height: 20vh;
 }
 
-input.inputYeast {
+.yeastInputGroup {
+  border: 2px solid #2274A5;
+  border-radius: 2%;
+  margin: 1vh;
+}
+
+.yeastInputGroup__label {
+  position: absolute;
+  padding: 1px;
+  top: -5px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
+}
+
+.yeastInputGroup__input {
   width: 45vh;
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
   text-align: center;
-  margin: 1vh;
+  margin: 2vh;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
@@ -407,7 +423,7 @@ label.resetLabel:hover {
   opacity: 0.5;
 }
 
-.formAlc {
+form.formAlc {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -426,119 +442,67 @@ label.resetLabel:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 32vh;
+  height: 38vh;
 }
 
-.startBlg {
+.alcBLGStart {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
+  margin: 1vh;
+}
+
+.alcBLGStart__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
+}
+
+.alcBLGStart__input {
   width: 30vh;
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
   text-align: center;
-  margin: 1vh;
+  margin: 2vh;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
 }
 
-.startBlg::-webkit-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.startBlg:-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.startBlg::-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.startBlg::placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.startBlg:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.startBlg:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.startBlg:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.startBlg:focus::placeholder {
-  opacity: 0;
-}
-
-.endBlg {
-  width: 30vh;
-  border: none;
-  background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
-  text-align: center;
+.alcBLGEnd {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
   margin: 1vh;
+}
+
+.alcBLGEnd__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
+  font-size: 17px;
 }
 
-.endBlg::-webkit-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.endBlg:-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.endBlg::-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.endBlg::placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.endBlg:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.endBlg:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.endBlg:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.endBlg:focus::placeholder {
-  opacity: 0;
+.alcBLGEnd__input {
+  width: 30vh;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  margin: 2vh;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
 }
 
 span.spanFormAlc {
@@ -662,172 +626,94 @@ label.resetLabel:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 44vh;
+  height: 48vh;
 }
 
-.amountHops {
+.hops {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
+  margin: 1vh;
+}
+
+.hops__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
+}
+
+.hops__input {
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
   text-align: center;
+  margin: 2vh;
+}
+
+.acid {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
   margin: 1vh;
 }
 
-.amountHops::-webkit-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+.acid__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
 }
 
-.amountHops:-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.amountHops::-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.amountHops::placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.amountHops:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.amountHops:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.amountHops:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.amountHops:focus::placeholder {
-  opacity: 0;
-}
-
-.alphaAcid {
+.acid__input {
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
   text-align: center;
-  margin: 1vh;
-}
-
-.alphaAcid::-webkit-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.alphaAcid:-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.alphaAcid::-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.alphaAcid::placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.alphaAcid:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.alphaAcid:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.alphaAcid:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.alphaAcid:focus::placeholder {
-  opacity: 0;
+  margin: 2vh;
 }
 
 .wort {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
+  margin: 1vh;
+}
+
+.wort__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
+}
+
+.wort__input {
   font-family: "Quicksand", sans-serif;
   color: #0D1321;
   font-size: 30px;
   border: none;
   background-color: transparent;
-  border-bottom: 0.1px solid #2274A5;
   text-align: center;
-  margin: 1vh;
-}
-
-.wort::-webkit-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.wort:-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.wort::-ms-input-placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.wort::placeholder {
-  opacity: 1;
-  color: #2274A5;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.wort:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.wort:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.wort:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.wort:focus::placeholder {
-  opacity: 0;
+  margin: 2vh;
 }
 
 span.spanFormIbu {

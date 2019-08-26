@@ -45,15 +45,24 @@
     <p class="ibuP">
       What about bitterness?
       <br />
-      Remember about hops, alpha acid
-      <br />
-      and amount of wort
+      Remember about hops, alpha acid and amount of wort
     </p>
 
     <form class="formIbu">
-      <input class="amountHops" type="text" placeholder="Hops (g)" />
-      <input class="alphaAcid" type="text" placeholder="Alpha acid (%)" />
-      <input class="wort" type="text" placeholder="Amount of wort" />
+      <div class="hops">
+        <label for="hops" class="hops__label">Hops (g)</label>
+        <input id="hops" class="hops__input" type="text" />
+      </div>
+
+      <div class="acid">
+        <label for="acid" class="acid__label">Alpha acid (%)</label>
+        <input id="acid" class="acid__input" type="text" />
+      </div>
+
+      <div class="wort">
+        <label for="wort" class="wort__label">Amount of wort</label>
+        <input id="wort" class="wort__input" type="text" />
+      </div>
       <span class="spanFormIbu"></span>
       <button class="countIbu" type="submit">Calculate</button>
     </form>

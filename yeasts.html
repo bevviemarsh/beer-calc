@@ -49,7 +49,12 @@
     </p>
 
     <form class="formYeast">
-      <input class="inputYeast" type="text" placeholder="Amount of yeast (g)" />
+      <div class="yeastInputGroup">
+        <label for="yeast" class="yeastInputGroup__label"
+          >Amount of yeast (g)</label
+        >
+        <input id="yeast" class="yeastInputGroup__input" type="text" />
+      </div>
       <span class="spanFormYeast"></span>
       <button class="countYeast" type="submit">Calculate</button>
     </form>

@@ -2,8 +2,8 @@ const COUNTER = 1.938;
 
 // alc calc
 const formAlc = document.querySelector("form.formAlc");
-const inputStart = document.querySelector("input.startBlg");
-const inputEnd = document.querySelector("input.endBlg");
+const inputStart = document.querySelector("input.alcBLGStart__input");
+const inputEnd = document.querySelector("input.alcBLGEnd__input");
 const buttonAlc = document.querySelector("button.countAlc");
 const buttonResetAlc = document.querySelector("button.resetAlc");
 const spanFormAlc = document.querySelector("span.spanFormAlc");

@@ -6,46 +6,73 @@
 .formIbu {
   @include absolute-center();
   @include flex-column-center();
-  height: 44vh;
+  height: 48vh;
 }
 
-.amountHops {
-  @include Font();
-  @include inputs();
+.hops {
+  position: relative;
+  border: 2px solid $blueColor;
+  border-radius: 2%;
+  margin: 1vh;
+
+  &__label {
+    position: absolute;
+    padding: 2px;
+    top: -12px;
+    left: 20px;
+    background-color: $backgroundColor;
+    @include Font();
+    font-size: 17px;
+  }
+
+  &__input {
+    @include Font();
+    @include inputs();
+  }
 }
 
-.amountHops::placeholder {
-  @include inputsHover();
-}
+.acid {
+  position: relative;
+  border: 2px solid $blueColor;
+  border-radius: 2%;
+  margin: 1vh;
 
-.amountHops:focus::placeholder {
-  opacity: 0;
-}
+  &__label {
+    position: absolute;
+    padding: 2px;
+    top: -12px;
+    left: 20px;
+    background-color: $backgroundColor;
+    @include Font();
+    font-size: 17px;
+  }
 
-.alphaAcid {
-  @include Font();
-  @include inputs();
-}
-
-.alphaAcid::placeholder {
-  @include inputsHover();
-}
-
-.alphaAcid:focus::placeholder {
-  opacity: 0;
+  &__input {
+    @include Font();
+    @include inputs();
+  }
 }
 
 .wort {
-  @include Font();
-  @include inputs();
-}
+  position: relative;
+  border: 2px solid $blueColor;
+  border-radius: 2%;
+  margin: 1vh;
 
-.wort::placeholder {
-  @include inputsHover();
-}
+  &__label {
+    position: absolute;
+    padding: 2px;
+    top: -12px;
+    left: 20px;
+    background-color: $backgroundColor;
+    @include Font();
+    font-size: 17px;
+  }
 
-.wort:focus::placeholder {
-  opacity: 0;
+  &__input {
+    @include Font();
+    @include inputs();
+  }
 }
 
 span.spanFormIbu {

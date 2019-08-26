@@ -3,9 +3,9 @@ const COUNTER_TWO = 30;
 
 // IBU/EBU calc
 const formIbu = document.querySelector("form.formIbu");
-const inputHops = document.querySelector("input.amountHops");
-const inputAlpha = document.querySelector("input.alphaAcid");
-const inputWort = document.querySelector("input.wort");
+const inputHops = document.querySelector("input.hops__input");
+const inputAlpha = document.querySelector("input.acid__input");
+const inputWort = document.querySelector("input.wort__input");
 const spanFormIbu = document.querySelector("span.spanFormIbu");
 const buttonIbuCalc = document.querySelector("button.countIbu");
 const divIbu = document.querySelector("div.resultIbu");

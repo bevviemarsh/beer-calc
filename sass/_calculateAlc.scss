@@ -3,39 +3,73 @@
   @include paragraphs();
 }
 
-.formAlc {
+form.formAlc {
   @include absolute-center();
   @include flex-column-center();
-  height: 32vh;
+  height: 38vh;
 }
 
-.startBlg {
-  width: 30vh;
-  @include inputs();
-  @include Font();
+.alcBLGStart {
+  position: relative;
+  border: 2px solid $blueColor;
+  border-radius: 2%;
+  margin: 1vh;
+
+  &__label {
+    position: absolute;
+    padding: 2px;
+    top: -12px;
+    left: 20px;
+    background-color: $backgroundColor;
+    @include Font();
+    font-size: 17px;
+  }
+
+  &__input {
+    width: 30vh;
+    @include inputs();
+    @include Font();
+  }
 }
 
-.startBlg::placeholder {
-  @include inputsHover();
+.alcBLGEnd {
+  position: relative;
+  border: 2px solid $blueColor;
+  border-radius: 2%;
+  margin: 1vh;
+
+  &__label {
+    position: absolute;
+    padding: 2px;
+    top: -12px;
+    left: 20px;
+    background-color: $backgroundColor;
+    @include Font();
+    font-size: 17px;
+  }
+
+  &__input {
+    width: 30vh;
+    @include inputs();
+    @include Font();
+  }
 }
 
-.startBlg:focus::placeholder {
-  opacity: 0;
-}
+// .startBlg::placeholder {
+//   @include inputsHover();
+// }
 
-.endBlg {
-  width: 30vh;
-  @include inputs();
-  @include Font();
-}
+// .startBlg:focus::placeholder {
+//   opacity: 0;
+// }
 
-.endBlg::placeholder {
-  @include inputsHover();
-}
+// .endBlg::placeholder {
+//   @include inputsHover();
+// }
 
-.endBlg:focus::placeholder {
-  opacity: 0;
-}
+// .endBlg:focus::placeholder {
+//   opacity: 0;
+// }
 
 span.spanFormAlc {
   @include Font();

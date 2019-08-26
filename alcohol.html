@@ -51,8 +51,15 @@
     </p>
 
     <form class="formAlc">
-      <input class="startBlg" type="text" placeholder="BLG(start)" />
-      <input class="endBlg" type="text" placeholder="BLG(end)" />
+      <div class="alcBLGStart">
+        <label for="start" class="alcBLGStart__label">BLG (start)</label>
+        <input id="start" class="alcBLGStart__input" type="text" />
+      </div>
+
+      <div class="alcBLGEnd">
+        <label for="end" class="alcBLGEnd__label">BLG (end)</label>
+        <input id="end" class="alcBLGEnd__input" type="text" />
+      </div>
       <span class="spanFormAlc"></span>
       <button class="countAlc" type="submit">Calculate</button>
     </form>

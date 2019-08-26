@@ -2,7 +2,7 @@ const COUNTERYEAST = 10;
 // yeast calc
 const formYeast = document.querySelector("form.formYeast");
 const buttonYeast = document.querySelector("button.countYeast");
-const inputYeast = document.querySelector("input.inputYeast");
+const inputYeast = document.querySelector("input.yeastInputGroup__input");
 const spanFormYeast = document.querySelector("span.spanFormYeast");
 const divYeast = document.querySelector("div.resultYeast");
 const buttonResetYeast = document.querySelector("button.resetYeast");

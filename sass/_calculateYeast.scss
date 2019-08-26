@@ -9,10 +9,26 @@ form.formYeast {
   height: 20vh;
 }
 
-input.inputYeast {
-  width: 45vh;
-  @include inputs();
-  @include Font();
+.yeastInputGroup {
+  border: 2px solid $blueColor;
+  border-radius: 2%;
+  margin: 1vh;
+
+  &__label {
+    position: absolute;
+    padding: 1px;
+    top: -5px;
+    left: 20px;
+    background-color: $backgroundColor;
+    @include Font();
+    font-size: 17px;
+  }
+
+  &__input {
+    width: 45vh;
+    @include inputs();
+    @include Font();
+  }
 }
 
 input.inputYeast::placeholder {
