@@ -30,30 +30,40 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="burger">+</div>
+    <!-- <div class="burger">+</div> -->
+    <div class="icoRight">
+      <i class="fas fa-beer"></i>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Beer</a><span></span></li>
-        <li><a href="">Account</a><span></span></li>
+        <li><a href="account.html">Account</a><span></span></li>
         <li><a href="yeasts.html">Yeast</a><span></span></li>
         <li><a href="alcohol.html">Alcohol</a><span></span></li>
         <li><a href="ibu.html">IBU/EBU</a><span></span></li>
+        <li>
+          <a href="https://github.com/bevviemarsh/beer-calc" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <span class="footer">&copy PM, version 1.0.0.</span>
       </ul>
     </nav>
 
     <form class="formAccount">
-      <input
-        class="formAccount__input-user"
-        type="text"
-        id="username"
-        placeholder="username"
-      />
-      <input
-        class="formAccount__input-pass"
-        type="password"
-        id="password"
-        placeholder="password"
-      />
+      <div class="formAccountDivU">
+        <label for="user" class="formAccountDivU__label">Username</label>
+        <input id="user" class="formAccountDivU__input-user" type="text" />
+      </div>
+
+      <div class="formAccountDivP">
+        <label for="password" class="formAccountDivP__label">Password</label>
+        <input
+          class="formAccountDivP__input-pass"
+          type="password"
+          id="password"
+        />
+      </div>
       <button class="formAccount__button" type="submit">Sign in</button>
       <span class="formAccount__span">or</span>
       <button

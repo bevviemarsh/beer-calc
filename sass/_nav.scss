@@ -1,21 +1,22 @@
 nav {
   @include flex-column-center();
   position: absolute;
-  height: 100vh;
+  max-height: 100vh;
   width: 40vh;
   top: 0;
-  left: -40vh;
+  left: 0;
   background-color: $darkColor;
   transition: $transitionTime;
 
   ul {
     list-style: none;
+    min-height: 100vh;
     @include flex-column-center();
 
     li {
       position: relative;
-      margin: 7vh;
-      font-size: 20px;
+      margin: 4vh;
+      font-size: 25px;
       color: $yellowColor;
       font-family: "News Cycle", sans-serif;
       letter-spacing: 5px;
@@ -32,6 +33,13 @@ nav {
         background-color: $blueColor;
         transition: $transitionTime;
       }
+    }
+    .footer {
+      margin: 3vh;
+      font-size: 15px;
+      color: $yellowColor;
+      font-family: "News Cycle", sans-serif;
+      letter-spacing: 5px;
     }
   }
 }

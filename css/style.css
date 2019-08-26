@@ -37,10 +37,10 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  height: 100vh;
+  max-height: 100vh;
   width: 40vh;
   top: 0;
-  left: -40vh;
+  left: 0;
   background-color: #0D1321;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -48,6 +48,7 @@ nav {
 
 nav ul {
   list-style: none;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,8 +66,8 @@ nav ul {
 
 nav ul li {
   position: relative;
-  margin: 7vh;
-  font-size: 20px;
+  margin: 4vh;
+  font-size: 25px;
   color: #F3C677;
   font-family: "News Cycle", sans-serif;
   letter-spacing: 5px;
@@ -84,6 +85,14 @@ nav ul li span {
   background-color: #2274A5;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+nav ul .footer {
+  margin: 3vh;
+  font-size: 15px;
+  color: #F3C677;
+  font-family: "News Cycle", sans-serif;
+  letter-spacing: 5px;
 }
 
 li:hover span {
@@ -115,23 +124,16 @@ a {
   opacity: 0.3;
 }
 
-.burger {
+.icoRight {
   position: absolute;
   top: 7%;
   right: 10%;
   height: 7vh;
   width: 7vh;
-  border-radius: 50%;
-  border: 2px solid #F3C677;
-  background-color: #F3C677;
-  text-align: center;
-  line-height: 7vh;
+  font-family: "Quicksand", sans-serif;
+  text-align: right;
+  color: #AC3B61;
   font-size: 40px;
-  font-family: 'Monoton', cursive;
-  color: #0D1321;
-  cursor: pointer;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .mainP {
@@ -176,7 +178,56 @@ a {
           box-shadow: 0px 0px 3px 1px #0D1321;
 }
 
-.formAccount__input-user, .formAccount__input-pass {
+.formAccount .formAccountDivU {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
+  margin: 1vh;
+}
+
+.formAccount .formAccountDivU__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
+}
+
+.formAccount .formAccountDivU__input-user {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  margin: 2vh;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 20px;
+}
+
+.formAccount .formAccountDivP {
+  position: relative;
+  border: 2px solid #2274A5;
+  border-radius: 2%;
+  margin: 1vh;
+}
+
+.formAccount .formAccountDivP__label {
+  position: absolute;
+  padding: 2px;
+  top: -12px;
+  left: 20px;
+  background-color: #F6F1ED;
+  font-family: "Quicksand", sans-serif;
+  color: #0D1321;
+  font-size: 30px;
+  font-size: 17px;
+}
+
+.formAccount .formAccountDivP__input-pass {
   border: none;
   background-color: transparent;
   text-align: center;
