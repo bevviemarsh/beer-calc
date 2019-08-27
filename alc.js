@@ -2,8 +2,8 @@ const COUNTER = 1.938;
 
 // alc calc
 const formAlc = document.querySelector("form.formAlc");
-const inputStart = document.querySelector("input.alcBLGStart__input");
-const inputEnd = document.querySelector("input.alcBLGEnd__input");
+// const inputStart = document.querySelector("input.alcBLGStart__input");
+// const inputEnd = document.querySelector("input.alcBLGEnd__input");
 const buttonAlc = document.querySelector("button.countAlc");
 const buttonResetAlc = document.querySelector("button.resetAlc");
 const spanFormAlc = document.querySelector("span.spanFormAlc");
@@ -16,21 +16,39 @@ const resultThree = document.querySelector("td.resultThree");
 formAlc.addEventListener("submit", e => {
   e.preventDefault();
 
-  const inputAlcStartValue = inputStart.value;
-  const inputAlcEndValue = inputEnd.value;
+  const alcInputs = new FormData(formAlc);
+  alcInputs.append("start", start.value);
+  alcInputs.append("end", end.value);
+  const startIn = alcInputs.get("start");
+  const endIn = alcInputs.get("end");
+
+  // const inputAlcStartValue = inputStart.value;
+  // const inputAlcEndValue = inputEnd.value;
+
+  // if (
+  //   inputAlcStartValue === "" ||
+  //   inputAlcEndValue === "" ||
+  //   isNaN(inputAlcStartValue) ||
+  //   isNaN(inputAlcEndValue) ||
+  //   inputAlcStartValue > 100 ||
+  //   inputAlcEndValue > 100
+  // ) {
+  //   return (spanFormAlc.innerHTML = `Number from 0 to 100`);
+  // }
 
   if (
-    inputAlcStartValue === "" ||
-    inputAlcEndValue === "" ||
-    isNaN(inputAlcStartValue) ||
-    isNaN(inputAlcEndValue) ||
-    inputAlcStartValue > 100 ||
-    inputAlcEndValue > 100
+    startIn === "" ||
+    endIn === "" ||
+    isNaN(startIn) ||
+    isNaN(endIn) ||
+    startIn > 100 ||
+    endIn > 100
   ) {
     return (spanFormAlc.innerHTML = `Number from 0 to 100`);
   }
 
-  const resultAlc = (inputAlcStartValue - inputAlcEndValue) / COUNTER;
+  // const resultAlc = (inputAlcStartValue - inputAlcEndValue) / COUNTER;
+  const resultAlc = (startIn - endIn) / COUNTER;
 
   divAlc.innerHTML = `${resultAlc.toFixed(1)} <span class="perCent">%</span>`;
 
@@ -58,8 +76,7 @@ const resetAlc = () => {
   divAlc.innerHTML = "";
   spanFormAlc.innerHTML = "";
   if (checkboxReset.checked === true) {
-    inputStart.value = "";
-    inputEnd.value = "";
+    formAlc.reset();
     resultOne.innerHTML = "";
     resultTwo.innerHTML = "";
     resultThree.innerHTML = "";
