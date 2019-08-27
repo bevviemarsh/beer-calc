@@ -6,12 +6,12 @@
 }
 
 div.burger.active {
-  -webkit-transform: rotate(405deg);
-          transform: rotate(405deg);
+  -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
 }
 
 div.burger.active + nav {
-  left: 0;
+  left: -40vh;
 }
 
 body {
@@ -40,7 +40,7 @@ nav {
   max-height: 100vh;
   width: 40vh;
   top: 0;
-  left: 0;
+  left: 0vh;
   background-color: #0D1321;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -124,16 +124,23 @@ a {
   opacity: 0.3;
 }
 
-.icoRight {
+.burger {
   position: absolute;
   top: 7%;
   right: 10%;
   height: 7vh;
   width: 7vh;
-  font-family: "Quicksand", sans-serif;
-  text-align: right;
-  color: #AC3B61;
+  border-radius: 50%;
+  border: 2px solid #F3C677;
+  background-color: #F3C677;
+  text-align: center;
+  line-height: 7vh;
   font-size: 40px;
+  font-family: "Monoton", cursive;
+  color: #0D1321;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .mainP {

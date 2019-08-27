@@ -1,29 +1,29 @@
-// .burger {
-//   position: absolute;
-//   top: 7%;
-//   right: 10%;
-//   height: 7vh;
-//   width: 7vh;
-//   border-radius: 50%;
-//   border: 2px solid $yellowColor;
-//   background-color: $yellowColor;
-//   text-align: center;
-//   line-height: 7vh;
-//   font-size: 40px;
-//   font-family: "Monoton", cursive;
-//   color: $darkColor;
-//   cursor: pointer;
-//   transition: $transitionTime;
-// }
-
-.icoRight {
+.burger {
   position: absolute;
   top: 7%;
   right: 10%;
   height: 7vh;
   width: 7vh;
-  font-family: "Quicksand", sans-serif;
-  text-align: right;
-  color: $pinkColor;
+  border-radius: 50%;
+  border: 2px solid $yellowColor;
+  background-color: $yellowColor;
+  text-align: center;
+  line-height: 7vh;
   font-size: 40px;
+  font-family: "Monoton", cursive;
+  color: $darkColor;
+  cursor: pointer;
+  transition: $transitionTime;
 }
+
+// .icoRight {
+//   position: absolute;
+//   top: 7%;
+//   right: 10%;
+//   height: 7vh;
+//   width: 7vh;
+//   font-family: "Quicksand", sans-serif;
+//   text-align: right;
+//   color: $pinkColor;
+//   font-size: 40px;
+// }

@@ -1,7 +1,7 @@
 div.burger.active {
-    transform: rotate((405deg));
+  transform: rotate((-405deg));
 }
 
-div.burger.active+nav {
-    left: 0;
+div.burger.active + nav {
+  left: -40vh;
 }
