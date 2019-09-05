@@ -7,250 +7,222 @@ const navGear = () => {
 
 burger.addEventListener("click", navGear);
 
-// global const
+// global consts
 const COUNTERYEAST = 10;
 const COUNTER = 1.938;
 const COUNTER_ONE = 10;
 const COUNTER_TWO = 30;
 
 // forms
-const formYeast = document.querySelector("form.formYeast");
-const formAlc = document.querySelector("form.formAlc");
-const formIbu = document.querySelector("form.formIbu");
+const forms = document.getElementById("beerForm");
 
 // calculations
 
-// yeast
-function calculateYeast() {
-  if (!formYeast) {
-    return;
-  } else {
-    formYeast.addEventListener("submit", e => {
-      e.preventDefault();
+if (forms.dataset.type === "yeast") {
+  forms.addEventListener("submit", e => {
+    e.preventDefault();
 
-      const inputYeast = document.querySelector("input.yeastInputGroup__input");
-      const spanFormYeast = document.querySelector("span.spanFormYeast");
-      const divYeast = document.querySelector("div.resultYeast");
-      const buttonResetYeast = document.querySelector("button.resetYeast");
-      const checkboxReset = document.querySelector("input.resetCheck");
-      const resultOne = document.querySelector("td.resultOne");
-      const resultTwo = document.querySelector("td.resultTwo");
-      const resultThree = document.querySelector("td.resultThree");
+    const inputYeast = document.querySelector("input.yeastInputGroup__input");
+    const spanFormYeast = document.querySelector("span.spanFormYeast");
+    const divYeast = document.querySelector("div.resultYeast");
+    const buttonResetYeast = document.querySelector("button.resetYeast");
+    const checkboxReset = document.querySelector("input.resetCheck");
+    const resultOne = document.querySelector("td.resultOne");
+    const resultTwo = document.querySelector("td.resultTwo");
+    const resultThree = document.querySelector("td.resultThree");
 
-      const inputYeastValue = inputYeast.value;
+    const inputYeastValue = inputYeast.value;
 
-      if (
-        inputYeastValue === "" ||
-        isNaN(inputYeastValue) ||
-        inputYeastValue > 1000
-      ) {
-        return (spanFormYeast.innerHTML = `Number from 0 to 1000`);
-      }
+    if (
+      inputYeastValue === "" ||
+      isNaN(inputYeastValue) ||
+      inputYeastValue > 1000
+    ) {
+      return (spanFormYeast.innerHTML = `Number from 0 to 1000`);
+    }
 
-      const resultYeast = inputYeastValue * COUNTERYEAST;
-      divYeast.innerHTML = `${resultYeast} <span class="waterYeast">ml</span>`;
+    const resultYeast = inputYeastValue * COUNTERYEAST;
+    divYeast.innerHTML = `${resultYeast} <span class="waterYeast">ml</span>`;
 
+    spanFormYeast.innerHTML = "";
+
+    if (
+      !resultOne.innerHTML &&
+      !resultTwo.innerHTML &&
+      !resultThree.innerHTML
+    ) {
+      resultOne.innerHTML = `${resultYeast}`;
+    } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
+      resultTwo.innerHTML = `${resultYeast}`;
+    } else if (!resultThree.innerHTML) {
+      resultThree.innerHTML = `${resultYeast}`;
+    } else if (
+      resultOne.innerHTML &&
+      resultTwo.innerHTML &&
+      resultThree.innerHTML
+    ) {
+      resultOne.innerHTML = "";
+      resultTwo.innerHTML = "";
+      resultThree.innerHTML = "";
+      resultOne.innerHTML = `${resultYeast}`;
+    }
+
+    const resetYeast = () => {
+      divYeast.innerHTML = "";
       spanFormYeast.innerHTML = "";
-
-      if (
-        !resultOne.innerHTML &&
-        !resultTwo.innerHTML &&
-        !resultThree.innerHTML
-      ) {
-        resultOne.innerHTML = `${resultYeast}`;
-      } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
-        resultTwo.innerHTML = `${resultYeast}`;
-      } else if (!resultThree.innerHTML) {
-        resultThree.innerHTML = `${resultYeast}`;
-      } else if (
-        resultOne.innerHTML &&
-        resultTwo.innerHTML &&
-        resultThree.innerHTML
-      ) {
+      if (checkboxReset.checked === true) {
+        inputYeast.value = "";
         resultOne.innerHTML = "";
         resultTwo.innerHTML = "";
         resultThree.innerHTML = "";
-        resultOne.innerHTML = `${resultYeast}`;
       }
+    };
 
-      const resetYeast = () => {
-        divYeast.innerHTML = "";
-        spanFormYeast.innerHTML = "";
-        if (checkboxReset.checked === true) {
-          inputYeast.value = "";
-          resultOne.innerHTML = "";
-          resultTwo.innerHTML = "";
-          resultThree.innerHTML = "";
-        }
-      };
+    buttonResetYeast.addEventListener("click", resetYeast);
+  });
+} else if (forms.dataset.type === "alcohol") {
+  forms.addEventListener("submit", e => {
+    e.preventDefault();
 
-      buttonResetYeast.addEventListener("click", resetYeast);
-    });
-  }
-}
+    const buttonResetAlc = document.querySelector("button.resetAlc");
+    const spanFormAlc = document.querySelector("span.spanFormAlc");
+    const divAlc = document.querySelector("div.resultAlc");
+    const checkboxReset = document.querySelector("input.resetCheck");
+    const resultOne = document.querySelector("td.resultOne");
+    const resultTwo = document.querySelector("td.resultTwo");
+    const resultThree = document.querySelector("td.resultThree");
 
-// alcohol
-function calculateAlc() {
-  if (!formAlc) {
-    return;
-  } else {
-    formAlc.addEventListener("submit", e => {
-      e.preventDefault();
+    const alcInputs = new FormData(forms);
+    alcInputs.append("start", start.value);
+    alcInputs.append("end", end.value);
+    const startIn = alcInputs.get("start");
+    const endIn = alcInputs.get("end");
 
-      const buttonResetAlc = document.querySelector("button.resetAlc");
-      const spanFormAlc = document.querySelector("span.spanFormAlc");
-      const divAlc = document.querySelector("div.resultAlc");
-      const checkboxReset = document.querySelector("input.resetCheck");
-      const resultOne = document.querySelector("td.resultOne");
-      const resultTwo = document.querySelector("td.resultTwo");
-      const resultThree = document.querySelector("td.resultThree");
+    if (
+      startIn === "" ||
+      endIn === "" ||
+      isNaN(startIn) ||
+      isNaN(endIn) ||
+      startIn > 100 ||
+      endIn > 100
+    ) {
+      return (spanFormAlc.innerHTML = `Number from 0 to 100`);
+    }
 
-      const alcInputs = new FormData(formAlc);
-      alcInputs.append("start", start.value);
-      alcInputs.append("end", end.value);
-      const startIn = alcInputs.get("start");
-      const endIn = alcInputs.get("end");
+    const resultAlc = (startIn - endIn) / COUNTER;
 
-      if (
-        startIn === "" ||
-        endIn === "" ||
-        isNaN(startIn) ||
-        isNaN(endIn) ||
-        startIn > 100 ||
-        endIn > 100
-      ) {
-        return (spanFormAlc.innerHTML = `Number from 0 to 100`);
-      }
+    divAlc.innerHTML = `${resultAlc.toFixed(1)} <span class="perCent">%</span>`;
 
-      const resultAlc = (startIn - endIn) / COUNTER;
+    spanFormAlc.innerHTML = "";
 
-      divAlc.innerHTML = `${resultAlc.toFixed(
-        1
-      )} <span class="perCent">%</span>`;
+    if (
+      !resultOne.innerHTML &&
+      !resultTwo.innerHTML &&
+      !resultThree.innerHTML
+    ) {
+      resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
+    } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
+      resultTwo.innerHTML = `${resultAlc.toFixed(1)}`;
+    } else if (!resultThree.innerHTML) {
+      resultThree.innerHTML = `${resultAlc.toFixed(1)}`;
+    } else if (
+      resultOne.innerHTML &&
+      resultTwo.innerHTML &&
+      resultThree.innerHTML
+    ) {
+      resultOne.innerHTML = "";
+      resultTwo.innerHTML = "";
+      resultThree.innerHTML = "";
+      resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
+    }
 
+    const resetAlc = () => {
+      divAlc.innerHTML = "";
       spanFormAlc.innerHTML = "";
-
-      if (
-        !resultOne.innerHTML &&
-        !resultTwo.innerHTML &&
-        !resultThree.innerHTML
-      ) {
-        resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
-      } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
-        resultTwo.innerHTML = `${resultAlc.toFixed(1)}`;
-      } else if (!resultThree.innerHTML) {
-        resultThree.innerHTML = `${resultAlc.toFixed(1)}`;
-      } else if (
-        resultOne.innerHTML &&
-        resultTwo.innerHTML &&
-        resultThree.innerHTML
-      ) {
+      if (checkboxReset.checked === true) {
+        forms.reset();
         resultOne.innerHTML = "";
         resultTwo.innerHTML = "";
         resultThree.innerHTML = "";
-        resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
       }
+    };
 
-      const resetAlc = () => {
-        divAlc.innerHTML = "";
-        spanFormAlc.innerHTML = "";
-        if (checkboxReset.checked === true) {
-          formAlc.reset();
-          resultOne.innerHTML = "";
-          resultTwo.innerHTML = "";
-          resultThree.innerHTML = "";
-        }
-      };
+    buttonResetAlc.addEventListener("click", resetAlc);
+  });
+} else if (forms.dataset.type === "ibu") {
+  forms.addEventListener("submit", e => {
+    e.preventDefault();
 
-      buttonResetAlc.addEventListener("click", resetAlc);
-    });
-  }
-}
+    const buttonResetIbu = document.querySelector("button.resetIbu");
+    const checkboxReset = document.querySelector("input.resetCheck");
+    const resultOne = document.querySelector("td.resultOne");
+    const resultTwo = document.querySelector("td.resultTwo");
+    const resultThree = document.querySelector("td.resultThree");
+    const spanFormIbu = document.querySelector("span.spanFormIbu");
+    const divIbu = document.querySelector("div.resultIbu");
 
-// ibu
-function calculateIbu() {
-  if (!formIbu) {
-    return;
-  } else {
-    formIbu.addEventListener("submit", e => {
-      e.preventDefault();
+    const ibuInputs = new FormData(forms);
 
-      const buttonResetIbu = document.querySelector("button.resetIbu");
-      const checkboxReset = document.querySelector("input.resetCheck");
-      const resultOne = document.querySelector("td.resultOne");
-      const resultTwo = document.querySelector("td.resultTwo");
-      const resultThree = document.querySelector("td.resultThree");
-      const spanFormIbu = document.querySelector("span.spanFormIbu");
-      const divIbu = document.querySelector("div.resultIbu");
+    ibuInputs.append("hops", hops.value);
+    ibuInputs.append("acid", acid.value);
+    ibuInputs.append("wort", wort.value);
+    const hopsIn = ibuInputs.get("hops");
+    const acidIn = ibuInputs.get("acid");
+    const wortIn = ibuInputs.get("wort");
 
-      const ibuInputs = new FormData(formIbu);
+    if (
+      hopsIn === "" ||
+      acidIn === "" ||
+      wortIn === "" ||
+      isNaN(hopsIn) ||
+      isNaN(acidIn) ||
+      isNaN(wortIn) ||
+      hopsIn > 1000 ||
+      acidIn > 500 ||
+      wortIn > 100
+    ) {
+      return (spanFormIbu.innerHTML =
+        "Hops: number from 0 to 1000. Alpha acid: number from to 500. Amount of wort: number from 0 to 100");
+    }
 
-      ibuInputs.append("hops", hops.value);
-      ibuInputs.append("acid", acid.value);
-      ibuInputs.append("wort", wort.value);
-      const hopsIn = ibuInputs.get("hops");
-      const acidIn = ibuInputs.get("acid");
-      const wortIn = ibuInputs.get("wort");
+    const Iburesult = (hopsIn * acidIn * COUNTER_TWO) / (wortIn * COUNTER_ONE);
 
-      if (
-        hopsIn === "" ||
-        acidIn === "" ||
-        wortIn === "" ||
-        isNaN(hopsIn) ||
-        isNaN(acidIn) ||
-        isNaN(wortIn) ||
-        hopsIn > 1000 ||
-        acidIn > 500 ||
-        wortIn > 100
-      ) {
-        return (spanFormIbu.innerHTML =
-          "Hops: number from 0 to 1000. Alpha acid: number from to 500. Amount of wort: number from 0 to 100");
-      }
+    divIbu.innerHTML = `${Iburesult.toFixed()} <span class="ibuEbu">IBU/EBU</span>`;
 
-      const Iburesult =
-        (hopsIn * acidIn * COUNTER_TWO) / (wortIn * COUNTER_ONE);
+    spanFormIbu.innerHTML = "";
 
-      divIbu.innerHTML = `${Iburesult.toFixed()} <span class="ibuEbu">IBU/EBU</span>`;
+    if (
+      !resultOne.innerHTML &&
+      !resultTwo.innerHTML &&
+      !resultThree.innerHTML
+    ) {
+      resultOne.innerHTML = `${Iburesult.toFixed()}`;
+    } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
+      resultTwo.innerHTML = `${Iburesult.toFixed()}`;
+    } else if (!resultThree.innerHTML) {
+      resultThree.innerHTML = `${Iburesult.toFixed()}`;
+    } else if (
+      resultOne.innerHTML &&
+      resultTwo.innerHTML &&
+      resultThree.innerHTML
+    ) {
+      resultOne.innerHTML = "";
+      resultTwo.innerHTML = "";
+      resultThree.innerHTML = "";
+      resultOne.innerHTML = `${Iburesult.toFixed()}`;
+    }
 
+    const resetIbu = () => {
+      divIbu.innerHTML = "";
       spanFormIbu.innerHTML = "";
-
-      if (
-        !resultOne.innerHTML &&
-        !resultTwo.innerHTML &&
-        !resultThree.innerHTML
-      ) {
-        resultOne.innerHTML = `${Iburesult.toFixed()}`;
-      } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
-        resultTwo.innerHTML = `${Iburesult.toFixed()}`;
-      } else if (!resultThree.innerHTML) {
-        resultThree.innerHTML = `${Iburesult.toFixed()}`;
-      } else if (
-        resultOne.innerHTML &&
-        resultTwo.innerHTML &&
-        resultThree.innerHTML
-      ) {
+      if (checkboxReset.checked === true) {
+        forms.reset();
         resultOne.innerHTML = "";
         resultTwo.innerHTML = "";
         resultThree.innerHTML = "";
-        resultOne.innerHTML = `${Iburesult.toFixed()}`;
       }
+    };
 
-      const resetIbu = () => {
-        divIbu.innerHTML = "";
-        spanFormIbu.innerHTML = "";
-        if (checkboxReset.checked === true) {
-          formIbu.reset();
-          resultOne.innerHTML = "";
-          resultTwo.innerHTML = "";
-          resultThree.innerHTML = "";
-        }
-      };
-
-      buttonResetIbu.addEventListener("click", resetIbu);
-    });
-  }
+    buttonResetIbu.addEventListener("click", resetIbu);
+  });
 }
-
-calculateYeast();
-calculateAlc();
-calculateIbu();
