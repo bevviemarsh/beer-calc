@@ -41,7 +41,12 @@ if (forms.dataset.type === "yeast") {
       return (spanFormYeast.innerHTML = `Number from 0 to 1000`);
     }
 
-    const resultYeast = inputYeastValue * COUNTERYEAST;
+    function calcYeast(inputYeastValue, COUNTERYEAST) {
+      return inputYeastValue * COUNTERYEAST;
+    }
+
+    const resultYeast = calcYeast(inputYeastValue, COUNTERYEAST);
+    // const resultYeast = inputYeastValue * COUNTERYEAST;
     divYeast.innerHTML = `${resultYeast} <span class="waterYeast">ml</span>`;
 
     spanFormYeast.innerHTML = "";
@@ -109,7 +114,13 @@ if (forms.dataset.type === "yeast") {
       return (spanFormAlc.innerHTML = `Number from 0 to 100`);
     }
 
-    const resultAlc = (startIn - endIn) / COUNTER;
+    function calcAlc(startIn, endIn, COUNTER) {
+      return (startIn - endIn) / COUNTER;
+    }
+
+    const resultAlc = calcAlc(startIn, endIn, COUNTER);
+
+    // const resultAlc = (startIn - endIn) / COUNTER;
 
     divAlc.innerHTML = `${resultAlc.toFixed(1)} <span class="perCent">%</span>`;
 
@@ -185,7 +196,13 @@ if (forms.dataset.type === "yeast") {
         "Hops: number from 0 to 1000. Alpha acid: number from to 500. Amount of wort: number from 0 to 100");
     }
 
-    const Iburesult = (hopsIn * acidIn * COUNTER_TWO) / (wortIn * COUNTER_ONE);
+    function calcIbu(hopsIn, acidIn, wortIn, COUNTER_ONE, COUNTER_TWO) {
+      return (hopsIn * acidIn * COUNTER_TWO) / (wortIn * COUNTER_ONE);
+    }
+
+    const Iburesult = calcIbu(hopsIn, acidIn, wortIn, COUNTER_ONE, COUNTER_TWO);
+
+    // const Iburesult = (hopsIn * acidIn * COUNTER_TWO) / (wortIn * COUNTER_ONE);
 
     divIbu.innerHTML = `${Iburesult.toFixed()} <span class="ibuEbu">IBU/EBU</span>`;
 
