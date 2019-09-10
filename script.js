@@ -16,6 +16,41 @@ const COUNTER_TWO = 30;
 // forms
 const forms = document.getElementById("beerForm");
 
+// Results repository
+function resultsRepository(result, cleanup) {
+  const resultOne = document.querySelector("td.resultOne");
+  const resultTwo = document.querySelector("td.resultTwo");
+  const resultThree = document.querySelector("td.resultThree");
+  const checkboxReset = document.querySelector("input.resetCheck");
+
+  if (!resultOne.innerHTML && !resultTwo.innerHTML && !resultThree.innerHTML) {
+    resultOne.innerHTML = `${result}`;
+  } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
+    resultTwo.innerHTML = `${result}`;
+  } else if (!resultThree.innerHTML) {
+    resultThree.innerHTML = `${result}`;
+  } else if (
+    resultOne.innerHTML &&
+    resultTwo.innerHTML &&
+    resultThree.innerHTML
+  ) {
+    resultOne.innerHTML = "";
+    resultTwo.innerHTML = "";
+    resultThree.innerHTML = "";
+    resultOne.innerHTML = `${result}`;
+  }
+
+  return () => {
+    cleanup();
+    if (checkboxReset.checked === true) {
+      forms.reset();
+      resultOne.innerHTML = "";
+      resultTwo.innerHTML = "";
+      resultThree.innerHTML = "";
+    }
+  };
+}
+
 // calculations
 
 function yeastPageController() {
@@ -23,10 +58,6 @@ function yeastPageController() {
   const spanFormYeast = document.querySelector("span.spanFormYeast");
   const divYeast = document.querySelector("div.resultYeast");
   const buttonResetYeast = document.querySelector("button.resetYeast");
-  const checkboxReset = document.querySelector("input.resetCheck");
-  const resultOne = document.querySelector("td.resultOne");
-  const resultTwo = document.querySelector("td.resultTwo");
-  const resultThree = document.querySelector("td.resultThree");
 
   const inputYeastValue = inputYeast.value;
 
@@ -48,45 +79,18 @@ function yeastPageController() {
 
   spanFormYeast.innerHTML = "";
 
-  if (!resultOne.innerHTML && !resultTwo.innerHTML && !resultThree.innerHTML) {
-    resultOne.innerHTML = `${resultYeast}`;
-  } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
-    resultTwo.innerHTML = `${resultYeast}`;
-  } else if (!resultThree.innerHTML) {
-    resultThree.innerHTML = `${resultYeast}`;
-  } else if (
-    resultOne.innerHTML &&
-    resultTwo.innerHTML &&
-    resultThree.innerHTML
-  ) {
-    resultOne.innerHTML = "";
-    resultTwo.innerHTML = "";
-    resultThree.innerHTML = "";
-    resultOne.innerHTML = `${resultYeast}`;
-  }
-
-  const resetYeast = () => {
+  const resetCallback = resultsRepository(resultYeast, () => {
     divYeast.innerHTML = "";
     spanFormYeast.innerHTML = "";
-    if (checkboxReset.checked === true) {
-      inputYeast.value = "";
-      resultOne.innerHTML = "";
-      resultTwo.innerHTML = "";
-      resultThree.innerHTML = "";
-    }
-  };
+  });
 
-  buttonResetYeast.addEventListener("click", resetYeast);
+  buttonResetYeast.addEventListener("click", resetCallback);
 }
 
 function alcoholPageController() {
   const buttonResetAlc = document.querySelector("button.resetAlc");
   const spanFormAlc = document.querySelector("span.spanFormAlc");
   const divAlc = document.querySelector("div.resultAlc");
-  const checkboxReset = document.querySelector("input.resetCheck");
-  const resultOne = document.querySelector("td.resultOne");
-  const resultTwo = document.querySelector("td.resultTwo");
-  const resultThree = document.querySelector("td.resultThree");
 
   const alcInputs = new FormData(forms);
   alcInputs.append("start", start.value);
@@ -111,49 +115,20 @@ function alcoholPageController() {
 
   const resultAlc = calcAlc(startIn, endIn, COUNTER);
 
-  // const resultAlc = (startIn - endIn) / COUNTER;
-
   divAlc.innerHTML = `${resultAlc.toFixed(1)} <span class="perCent">%</span>`;
 
   spanFormAlc.innerHTML = "";
 
-  if (!resultOne.innerHTML && !resultTwo.innerHTML && !resultThree.innerHTML) {
-    resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
-  } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
-    resultTwo.innerHTML = `${resultAlc.toFixed(1)}`;
-  } else if (!resultThree.innerHTML) {
-    resultThree.innerHTML = `${resultAlc.toFixed(1)}`;
-  } else if (
-    resultOne.innerHTML &&
-    resultTwo.innerHTML &&
-    resultThree.innerHTML
-  ) {
-    resultOne.innerHTML = "";
-    resultTwo.innerHTML = "";
-    resultThree.innerHTML = "";
-    resultOne.innerHTML = `${resultAlc.toFixed(1)}`;
-  }
-
-  const resetAlc = () => {
+  const resetCallback = resultsRepository(resultAlc.toFixed(1), () => {
     divAlc.innerHTML = "";
     spanFormAlc.innerHTML = "";
-    if (checkboxReset.checked === true) {
-      forms.reset();
-      resultOne.innerHTML = "";
-      resultTwo.innerHTML = "";
-      resultThree.innerHTML = "";
-    }
-  };
+  });
 
-  buttonResetAlc.addEventListener("click", resetAlc);
+  buttonResetAlc.addEventListener("click", resetCallback);
 }
 
 function ibuPageController() {
   const buttonResetIbu = document.querySelector("button.resetIbu");
-  const checkboxReset = document.querySelector("input.resetCheck");
-  const resultOne = document.querySelector("td.resultOne");
-  const resultTwo = document.querySelector("td.resultTwo");
-  const resultThree = document.querySelector("td.resultThree");
   const spanFormIbu = document.querySelector("span.spanFormIbu");
   const divIbu = document.querySelector("div.resultIbu");
 
@@ -187,41 +162,16 @@ function ibuPageController() {
 
   const Iburesult = calcIbu(hopsIn, acidIn, wortIn, COUNTER_ONE, COUNTER_TWO);
 
-  // const Iburesult = (hopsIn * acidIn * COUNTER_TWO) / (wortIn * COUNTER_ONE);
-
   divIbu.innerHTML = `${Iburesult.toFixed()} <span class="ibuEbu">IBU/EBU</span>`;
 
   spanFormIbu.innerHTML = "";
 
-  if (!resultOne.innerHTML && !resultTwo.innerHTML && !resultThree.innerHTML) {
-    resultOne.innerHTML = `${Iburesult.toFixed()}`;
-  } else if (!resultTwo.innerHTML && !resultThree.innerHTML) {
-    resultTwo.innerHTML = `${Iburesult.toFixed()}`;
-  } else if (!resultThree.innerHTML) {
-    resultThree.innerHTML = `${Iburesult.toFixed()}`;
-  } else if (
-    resultOne.innerHTML &&
-    resultTwo.innerHTML &&
-    resultThree.innerHTML
-  ) {
-    resultOne.innerHTML = "";
-    resultTwo.innerHTML = "";
-    resultThree.innerHTML = "";
-    resultOne.innerHTML = `${Iburesult.toFixed()}`;
-  }
-
-  const resetIbu = () => {
+  const resetCallback = resultsRepository(Iburesult.toFixed(), () => {
     divIbu.innerHTML = "";
     spanFormIbu.innerHTML = "";
-    if (checkboxReset.checked === true) {
-      forms.reset();
-      resultOne.innerHTML = "";
-      resultTwo.innerHTML = "";
-      resultThree.innerHTML = "";
-    }
-  };
+  });
 
-  buttonResetIbu.addEventListener("click", resetIbu);
+  buttonResetIbu.addEventListener("click", resetCallback);
 }
 
 forms.addEventListener("submit", e => {
