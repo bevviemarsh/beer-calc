@@ -224,19 +224,13 @@ function ibuPageController() {
   buttonResetIbu.addEventListener("click", resetIbu);
 }
 
-if (forms.dataset.type === "yeast") {
-  forms.addEventListener("submit", e => {
-    e.preventDefault();
+forms.addEventListener("submit", e => {
+  e.preventDefault();
+  if (forms.dataset.type === "yeast") {
     yeastPageController();
-  });
-} else if (forms.dataset.type === "alcohol") {
-  forms.addEventListener("submit", e => {
-    e.preventDefault();
+  } else if (forms.dataset.type === "alcohol") {
     alcoholPageController();
-  });
-} else if (forms.dataset.type === "ibu") {
-  forms.addEventListener("submit", e => {
-    e.preventDefault();
+  } else if (forms.dataset.type === "ibu") {
     ibuPageController();
-  });
-}
+  }
+});
