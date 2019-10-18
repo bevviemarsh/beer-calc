@@ -47,6 +47,7 @@ function resultsRepository(result, cleanup) {
       resultOne.innerHTML = "";
       resultTwo.innerHTML = "";
       resultThree.innerHTML = "";
+      checkboxReset.checked = false;
     }
   };
 }
